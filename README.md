@@ -35,3 +35,4 @@
 - RTM
 - Change Requests
 - Reviews
+- Quality managment
