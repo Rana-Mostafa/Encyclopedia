@@ -1,7 +1,7 @@
 # Encyclopedia
 ## Naming Convention 
-### Master Branch 160422_Release_01
-### Development Branch 160422_Inter_01
+### Master Branch 150422_Release_01
+### Development Branch 150422_Inter_01
 ## File Structure 
 ### 1-Concept  
 - PMP
