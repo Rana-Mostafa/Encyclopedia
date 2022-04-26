@@ -10,10 +10,10 @@
 ### 2.1-Design
 2.1.1-High-Level 
 - WBS
+- Wireframe
 
 2.1.2-Low-Level 
 - Design
-- Wireframe
 ### 2.2-Requirements 
 - SIQ
 - SRS
