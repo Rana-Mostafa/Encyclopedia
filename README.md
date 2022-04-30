@@ -10,10 +10,13 @@
 ### 2.1-Design
 2.1.1-High-Level 
 - WBS
-
+- Wireframe
+- Sequence Digram HL
+- ERD
+- Use Case 
 2.1.2-Low-Level 
 - Design
-- Wireframe
+- Sequence Digram LL
 ### 2.2-Requirements 
 - SIQ
 - SRS
