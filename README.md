@@ -20,7 +20,7 @@
 ### 2.2-Requirements 
 - SIQ
 - SRS
-- Usecase
+- Validation Specification
 ### 3-Development
 3.1-Front End 
 - UI
