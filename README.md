@@ -14,6 +14,7 @@
 - Sequence Digram HL
 - ERD
 - Use Case 
+- 
 2.1.2-Low-Level 
 - Design
 - Sequence Digram LL
@@ -39,3 +40,4 @@
 - Change Requests
 - Reviews
 - Quality managment
+- Risk managment
