@@ -25,8 +25,10 @@
 ### 3-Development
 3.1-Front End 
 - UI
+- 
 3.2-Back End 
 - DB
+- 
 3.3-Middelware 
 - Code
 ### 4-Testing
