@@ -1,0 +1,150 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Baloo+Bhaijaan+2&family=Cairo:wght@300&family=Comfortaa:wght@300&family=Comforter&family=Montserrat:wght@300&family=Raleway:ital,wght@0,200;0,300;1,100&display=swap');
+
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    color: #AC3B61;
+    font-weight: bold;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 50px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    z-index: 1;
+    opacity: .8;
+    border-radius: 8px;
+    margin: 8px;
+    border-color: #AC3B61;
+    border: 3px solid;
+}
+
+    .login-form h2 {
+        margin: 5px;
+        text-align: center;
+        font-weight: Bold;
+    }
+
+    .login-form h3 {
+        margin: 12px;
+        font-weight: Bold;
+    }
+
+    .login-form .input-form {
+        position: relative;
+        padding: 10px;
+        margin-bottom: 1px;
+        border-radius: 8px;
+    }
+
+        .login-form .input-form input {
+            outline: none;
+            height: 40px;
+            padding: 5px;
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid rgba(0,0,0,.5);
+            background: transparent;
+            font-size: 16px;
+            margin-bottom: 1px;
+            border-radius: 8px;
+        }
+
+            .login-form .input-form input[type="submit"] {
+                background: #AC3B61;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-family: 'Baloo Bhaijaan 2', 'cursive';
+                margin-bottom: 1px;
+            }
+
+                .login-form .input-form input[type="submit"]:hover {
+                    background: #123C96;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border: 4px solid;
+                }
+
+            .login-form .input-form input[type="button"] {
+                background-color: #AC3B61;
+                border-radius: 10px;
+                border: 2px solid;
+                padding: 4px;
+                border-color: #EEE2DC;
+                cursor: pointer;
+                text-decoration: none;
+                font-family: 'Baloo Bhaijaan 2', 'cursive';
+                color: #EEE2DC;
+            }
+
+                .login-form .input-form input[type="button"]:hover {
+                    background-color: #123C96;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border: 4px solid;
+                }
+
+            .login-form .input-form input[type="button1"] {
+                background: #AC3B61;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-family: 'Baloo Bhaijaan 2', 'cursive';
+                text-align: center;
+            }
+
+                .login-form .input-form input[type="button1"]:hover {
+                    background: #123C96;
+                    border: 4px solid;
+                    text-align: center;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+
+    .login-form .forget {
+        padding-left: 15px;
+        display: block;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+::placeholder {
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    padding: 1px;
+}
+
+.login-form .input-form input:focus {
+    border-color: #123C96;
+    border: 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+.login-form input[type="checkbox"] {
+    padding-left: 25px;
+}

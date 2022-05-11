@@ -1,0 +1,198 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&family=Baloo+Bhaijaan+2&family=Cairo:wght@300&family=Comfortaa:wght@300&family=Comforter&family=Montserrat:wght@300&family=Raleway:ital,wght@0,200;0,300;1,100&display=swap');
+
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.row img:hover {
+    border-color: black;
+    border: 3px solid;
+    border-radius: 10px;
+    transition: 0.0s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a img:hover {
+    border-color: black;
+    border: 3px solid;
+    transition: 0.0s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container img:hover {
+    border-radius: 10px;
+}
+
+.dropbtn {
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #6a6b6e;
+    border: none;
+    background-color: transparent;
+    animation: gradient 15s ease infinite;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ECECEB;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: #6a6b6e;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+}
+
+
+.dropbtn1 {
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #6a6b6e;
+    border: none;
+    background-color: transparent;
+    animation: gradient 15s ease infinite;
+}
+
+.dropdown1 {
+    position: relative;
+    left: 100px;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #ECECEB;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content1 a {
+        color: #6a6b6e;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content1 a:hover {
+            background-color: #ddd;
+        }
+
+.dropdown1:hover .dropdown-content1 {
+    display: block;
+}
+
+.dropdown1:hover .dropbtn1 {
+    background-color: transparent;
+}
+
+.container {
+    position: relative;
+    line-height: 1.5;
+    border: none;
+    background-color: transparent;
+    animation: gradient 15s ease infinite;
+}
+
+
+
+    .container .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: transparent;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+        .container .btn:hover {
+            background-color: transparent;
+        }
+
+.NF {
+    top: 30%;
+    z-index: 1;
+    left: 46%;
+    border: none;
+    background: border-box;
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    color: #6a6b6e;
+}
+
+#lo {
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    color: #6a6b6e;
+    padding-top: 4px;
+}
+
+#su {
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    color: #6a6b6e;
+    padding-top: 4px;
+}
+
+#ho {
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    color: #6a6b6e;
+    padding-top: 4px;
+}
