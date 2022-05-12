@@ -178,4 +178,13 @@ body {
 #more {
     display: none;
 }
+#outer {
+    width: 100%;
+    text-align: center;
+}
 
+.inner {
+    background-color: #182045;
+    color: white;
+    display: inline-block;
+}

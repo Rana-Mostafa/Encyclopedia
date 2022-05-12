@@ -106,6 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Admin-Birds and Parrots.aspx" />
+    <Content Include="Admin-Delete.aspx" />
+    <Content Include="Admin-History.aspx" />
+    <Content Include="Admin-Home.aspx" />
+    <Content Include="Admin-Plants and Animals.aspx" />
+    <Content Include="Admin-Space and Universe.aspx" />
     <Content Include="Animals and Plants.aspx" />
     <Content Include="Birds and Parrots.aspx" />
     <Content Include="Contact.aspx" />
@@ -146,6 +152,7 @@
     <Content Include="Images\history3.jpg" />
     <Content Include="Images\history4.jpg" />
     <Content Include="Images\Land Animal Totems.jpg" />
+    <Content Include="Images\lilac.jpg" />
     <Content Include="Images\London Stag Image _ National Geographic Your Shot Photo of the Day.jpg" />
     <Content Include="Images\ma2.jpg" />
     <Content Include="Images\max.png" />
@@ -198,6 +205,48 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin-Birds and Parrots.aspx.cs">
+      <DependentUpon>Admin-Birds and Parrots.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-Birds and Parrots.aspx.designer.cs">
+      <DependentUpon>Admin-Birds and Parrots.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Delete.aspx.cs">
+      <DependentUpon>Admin-Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-Delete.aspx.designer.cs">
+      <DependentUpon>Admin-Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-History.aspx.cs">
+      <DependentUpon>Admin-History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-History.aspx.designer.cs">
+      <DependentUpon>Admin-History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Home.aspx.cs">
+      <DependentUpon>Admin-Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-Home.aspx.designer.cs">
+      <DependentUpon>Admin-Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Plants and Animals.aspx.cs">
+      <DependentUpon>Admin-Plants and Animals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-Plants and Animals.aspx.designer.cs">
+      <DependentUpon>Admin-Plants and Animals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-Space and Universe.aspx.cs">
+      <DependentUpon>Admin-Space and Universe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-Space and Universe.aspx.designer.cs">
+      <DependentUpon>Admin-Space and Universe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Animals and Plants.aspx.cs">
       <DependentUpon>Animals and Plants.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

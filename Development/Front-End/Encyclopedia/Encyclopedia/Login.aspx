@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="CSS/Signup.css">
 </head>
 <body>
+
     <form id="form1" runat="server">
         <div class="login-form">
 			
