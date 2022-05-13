@@ -47,7 +47,7 @@ namespace Encyclopedia
                     else
                     {
                         //  FileUpload1.SaveAs(Server.MapPath("~/Uploads/" + FileUpload1.FileName));
-                        string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=encyclopedia;";
+                        string connectionString = "datasource = 10.145.0.233; port=3306;username=user;password=123456;database=encyclopedia;";
                         string iquery = "INSERT INTO voice_rec(VoiceRecName ,VoiceContent,VoiceRecID,ContentID) VALUES ('" + TextBox1.Text.ToString() + "','" + FileUpload1.FileName + "',2002,1)";
 
                         MySqlConnection databaseConnection = new MySqlConnection(connectionString);

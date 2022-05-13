@@ -27,7 +27,7 @@ namespace Encyclopedia
 
             {
 
-                string connectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=encyclopedia;";
+                string connectionString = "datasource = 10.145.0.233; port=3306;username=user;password=123456;database=encyclopedia;";
                 string iquery = "INSERT INTO user_category(CategoryID,UserID) VALUES (222,111)";
 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
