@@ -29,7 +29,7 @@
 						<div class="dropdown">
                         <div class="dropbtn">Post</div>
                         <div class="dropdown-content">
-                        <a href="#">Publish Article</a>
+                        <a href="Publish Article.aspx">Publish Article</a>
                         <a href="#">Upload Video</a>
                         <a href="#">Upload Record</a>
                         </div>
