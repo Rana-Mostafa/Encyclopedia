@@ -11,7 +11,7 @@ namespace Encyclopedia
 {
 
 
-    public partial class HomeE
+    public partial class Unregisterd_Birds_and_Parrots1
     {
 
         /// <summary>
