@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Space and Universe.aspx.cs" Inherits="Encyclopedia.Space_and_Universe" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Unregisterd-Space and Universe.aspx.cs" Inherits="Encyclopedia.Unregisterd_Space_and_Universe" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <title>Space and Universe </title>
+    <title>Space and Universe </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="CSS\Categories.css">
@@ -19,46 +19,27 @@
     <form id="form1" runat="server">
        <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
 			<div class="container-fluid">
-				<a class="navbar-brand fs-2" href="HomeE.aspx" target="_top">Encyclopedia</a>
+				<a class="navbar-brand fs-2" href="Unregisterd-Home.aspx" target="_top">Encyclopedia</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
-						
-						<div class="nav-link fs-5"> 
-						<div class="dropdown">
-                        <div class="dropbtn">Post</div>
-                        <div class="dropdown-content">
-                        <a href="Publish Article.aspx">Publish Article</a>
-                        <a href="Upload Video.aspx">Upload Video</a>
-                        <a href="Upload Record.aspx">Upload Record</a>
-                        </div>
-                        </div></div>
+						<a class="nav-link fs-5" href="Unregisterd-Home.aspx" target="_top"><h5 id="ho">Home</h5></a>
+						<a class="nav-link fs-5" href="Login.aspx" target="_top"><h5 id="lo">Login</h5></a>
+						<a class="nav-link fs-5" href="Signup.aspx" target="_top"><h5 id="su">Signup</h5></a>
+					
 						
 						
 						
 						<a class="nav-link fs-5"> <div class="dropdown">
                         <div class="dropbtn">Categories</div>
                         <div class="dropdown-content">
-                        <a href="Birds and Parrots.aspx">Birds and Parrots</a>
-                        <a href="History.aspx">History</a>
-                        <a href="Space and Universe.aspx">Space and Universe</a>
-						<a href="Animals and Plants.aspx">Animals and Plants</a>
+                        <a href="Unregisterd-Birds and Parrots.aspx">Birds and Parrots</a>
+                        <a href="Unregisterd-History.aspx">History</a>
+                        <a href="Unregisterd-Space and Universe.aspx">Space and Universe</a>
+						<a href="Unregisterd-Animals and Plants.aspx">Animals and Plants</a>
                         </div>
                         </div></a>
 						
-											<select name="dog-names" id="NF">
-  <option value="rigatoni">Notification</option>
-  <option value="dave">Publish Article</option>
-  <option value="pumpernickel">Upload Video</option>
-  <option value="reeses">Upload Record</option>
-</select>
-						
-						<a class="nav-link fs-5"> <img src="Images/Notification.png" width="25" height="25">
-						</a>
-						
-					</div>
-					<asp:Button ID="FollowBtn" class="button2" runat="server" Text="Follow" align="center"/>
-				</div>
+
 			</div>
 		</nav>
 		
