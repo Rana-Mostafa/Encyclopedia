@@ -205,6 +205,8 @@
     <Content Include="Unregisterd-History.aspx" />
     <Content Include="Unregisterd-Home.aspx" />
     <Content Include="Unregisterd-Space and Universe.aspx" />
+    <Content Include="Upload Record.aspx" />
+    <Content Include="Upload Video.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -384,6 +386,20 @@
     </Compile>
     <Compile Include="Unregisterd-Space and Universe.aspx.designer.cs">
       <DependentUpon>Unregisterd-Space and Universe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload Record.aspx.cs">
+      <DependentUpon>Upload Record.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upload Record.aspx.designer.cs">
+      <DependentUpon>Upload Record.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Upload Video.aspx.cs">
+      <DependentUpon>Upload Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Upload Video.aspx.designer.cs">
+      <DependentUpon>Upload Video.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

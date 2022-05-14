@@ -23,16 +23,14 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
-						<a class="nav-link fs-5" href="Login.aspx" target="_top"><h5 id="lo">Login</h5></a>
-						<a class="nav-link fs-5" href="Signup.aspx" target="_top"><h5 id="su">Signup</h5></a>
 						
 						<div class="nav-link fs-5"> 
 						<div class="dropdown">
                         <button class="dropbtn">Post</button> 
                         <div class="dropdown-content">
                         <a href="Publish Article.aspx">Publish Article</a>
-                        <a href="#">Upload Video</a>
-                        <a href="#">Upload Record</a>
+                        <a href="Upload Video.aspx">Upload Video</a>
+                        <a href="Upload Record.aspx">Upload Record</a>
                         </div>
                         </div></div>
 						

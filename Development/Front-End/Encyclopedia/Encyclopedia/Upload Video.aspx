@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Publish Article.aspx.cs" Inherits="Encyclopedia.Publish_Article" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Upload Video.aspx.cs" Inherits="Encyclopedia.Upload_Video" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title> Ensyclopedia </title>
+   <title> Ensyclopedia </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="CSS\Categories.css">
@@ -14,11 +14,10 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-	</head>
 </head>
 <body>
     <form id="form1" runat="server">
-        		<nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
+       <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
 			<div class="container-fluid">
 				<a class="navbar-brand fs-2" href="HomeE.aspx" target="_top">Encyclopedia</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -64,14 +63,23 @@
 		
 
  <form action="/url" method="GET">
-		<center><input placeholder="Article Name:" label="name" class="ArtName"></input></center>
-		<textarea cols="100" rows="50"  placeholder="Enter your text here..."></textarea>
+
+	 <div>
+            <br />
+            Name<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <br />
+        </div>
+        <asp:FileUpload ID="FileUpload1" runat="server" style="margin-top: 0px" />
+      
+        
+        
+		
     </form>
 	
 	
 <div id="outer">
 
-	<asp:Button ID="PostBtn" class="inner" runat="server" Text="Post" align="center"/>	
+	<asp:Button ID="PostBtn" class="inner" runat="server" Text="Upload Video" align="center"/>	
 </div>	
 		</div> 
 			<!-- /END THE FEATURETTES -->
