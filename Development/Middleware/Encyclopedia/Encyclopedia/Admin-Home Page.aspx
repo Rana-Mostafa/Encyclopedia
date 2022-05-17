@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin-Home.aspx.cs" Inherits="Encyclopedia.Admin_Home" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin-Home Page.aspx.cs" Inherits="Encyclopedia.Admin_Home_Page" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <title> Ensyclopedia </title>
+     <title> Ensyclopedia </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="CSS/Home.css">
@@ -26,13 +26,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
+              <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
 			<div class="container-fluid">
 				<a class="navbar-brand fs-2" href="Admin-Home.aspx" target="_top">Encyclopedia</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link fs-5" href="Admin-Home.aspx" target="_top"><h5 id="ho">Home</h5></a>
-						<a class="nav-link fs-5" href="Login.aspx" target="_top"><h5 id="lo">Login</h5></a>
+						<a class="nav-link fs-5" href="Admin-Home.aspx" target="_top"><h5 id="lo">Logout</h5></a>
 						
 						<div class="nav-link fs-5"> 
 						<div class="dropdown">
@@ -58,7 +58,33 @@
 				</div>
 			</div>
 		</nav>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="Images/London Stag Image _ National Geographic Your Shot Photo of the Day.jpg" alt="First slide" width="200" height="520">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="Images/download.jpg" alt="Second slide" width="200" height="520">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="Images/sspace.jpg" alt="Third slide" width="200" height="520">
+				</div>
 
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
 		
 		<div class="container marketing">
 			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">

@@ -23,8 +23,7 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
-						<a class="nav-link fs-5" href="Login.aspx" target="_top"><h5 id="lo">Login</h5></a>
-						<a class="nav-link fs-5" href="Signup.aspx" target="_top"><h5 id="su">Signup</h5></a>
+						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="lo">Logout</h5></a>
 						
 						<div class="nav-link fs-5"> 
 						<div class="dropdown">
@@ -47,18 +46,8 @@
                         </div>
                         </div></div>
 						
-						<select name="dog-names" id="NF">
-  <option value="rigatoni">Notification</option>
-  <option value="dave">Publish Article</option>
-  <option value="pumpernickel">Upload Video</option>
-  <option value="reeses">Upload Record</option>
-</select>
-						
-						<a class="nav-link fs-5"> <img src="Images/Notification.png" width="25" height="25">
-						</a>
 						
 					</div>
-					<asp:Button ID="FollowBtn" class="button2" runat="server" Text="Follow" align="center"/>
 				</div>
 			</div>
 		</nav>

@@ -39,19 +39,6 @@
                         </div>
                         </div></div>
 						
-						<a class="nav-link fs-5"> <div class="container">
-                       
-						<asp:DropDownList id="DropDownList1" runat="server" Class="NF">
-							<asp:ListItem>Publish Article</asp:ListItem>
-							<asp:ListItem>Upload Video</asp:ListItem>
-							<asp:ListItem>Upload Record</asp:ListItem>
-						</asp:DropDownList>
-							 <img src="Images/Notification.png" width="25" height="25"/>
-						
-						
-                        
-                       </div>
-						</a>
 					</div>
 				</div>
 			</div>

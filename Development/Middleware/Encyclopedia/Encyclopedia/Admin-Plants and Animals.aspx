@@ -32,7 +32,7 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link fs-5" href="Admin-Home.aspx" target="_top"><h5 id="ho">Home</h5></a>
-						
+					    <a class="nav-link fs-5" href="Admin-Home.aspx" target="_top"><h5 id="lo">Logout</h5></a>			
 						
 					<div class="nav-link fs-5"> 
 						<div class="dropdown">

@@ -38,52 +38,12 @@
 						<a href="Animals and Plants.aspx">Animals and Plants</a>
                         </div>
                         </div></div>
-						
-						<a class="nav-link fs-5"> <div class="container">
-                       
-						<asp:DropDownList id="DropDownList1" runat="server" Class="NF">
-							<asp:ListItem Value="">Notification</asp:ListItem>
-							<asp:ListItem>Publish Article</asp:ListItem>
-							<asp:ListItem>Upload Video</asp:ListItem>
-							<asp:ListItem>Upload Record</asp:ListItem>
-						</asp:DropDownList>
-							 <img src="Images/Notification.png" width="25" height="25">
-						
-						
-                        
-                       </div>
-						</a>
+					
 					</div>
 				</div>
 			</div>
 		</nav>
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<img class="d-block w-100" src="Images/London Stag Image _ National Geographic Your Shot Photo of the Day.jpg" alt="First slide" width="200" height="520">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="Images/download.jpg" alt="Second slide" width="200" height="520">
-				</div>
-				<div class="carousel-item">
-					<img class="d-block w-100" src="Images/sspace.jpg" alt="Third slide" width="200" height="520">
-				</div>
 
-		  </div>
-		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		  </a>
-		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		  </a>
-		</div>
 		
 		<div class="container marketing">
 			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
