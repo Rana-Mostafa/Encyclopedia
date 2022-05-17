@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home Page.aspx.cs" Inherits="Encyclopedia.Home_Page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomeE.aspx.cs" Inherits="Encyclopedia.HomeE" %>
 
 <!DOCTYPE html>
 
@@ -19,26 +19,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-      <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
+        <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
 			<div class="container-fluid">
-			<asp:LinkButton ID="LinkButton2" class="navbar-brand fs-2" runat="server" OnClick="Home_Click" target="_top">Encyclopedia</asp:LinkButton>
+				<a class="navbar-brand fs-2" href="Unregisterd-Home.aspx" target="_top">Encyclopedia</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-                        <asp:LinkButton ID="LinkButton1" class="linkstyle" runat="server" OnClick="Home_Click" target="_top"><h5 id="ho">Home</h5></asp:LinkButton>
-						<a class="nav-link fs-5" href="Home Page.aspx" target="_top"><h5 id="lo">Logout</h5></a>
-						
+						<a class="nav-link fs-5" href="Unregisterd-Home.aspx" target="_top"><h5 id="ho">Home</h5></a>
+						<a class="nav-link fs-5" href="Login.aspx" target="_top"><h5 id="lo">Login</h5></a>
+						<a class="nav-link fs-5" href="Signup.aspx" target="_top"><h5 id="su">Signup</h5></a>
 						
 						
 						<div class="nav-link fs-5"> <div class="dropdown">
                         <button class="dropbtn">Categories</button>
                         <div class="dropdown-content">
-						<asp:LinkButton ID="Birds" class="linkstyle" runat="server" OnClick="Birds_Click"> Birds and Parrots</asp:LinkButton>
-						<asp:LinkButton ID="History" class="linkstyle" runat="server" OnClick="History_Click"> History</asp:LinkButton>
-						<asp:LinkButton ID="Space" class="linkstyle" runat="server" OnClick="Space_Click"> Space and Universe</asp:LinkButton>
-						<asp:LinkButton ID="Animals" class="linkstyle" runat="server" OnClick="Animals_Click">Animals and Plants</asp:LinkButton>
-                        <!--<a href="History.aspx">History</a>
-                        <a href="Space and Universe.aspx">Space and Universe</a>
-						<a href="Animals and Plants.aspx">Animals and Plants</a>-->
+                        <a href="Unregisterd-Birds and Parrots.aspx">Birds and Parrots</a>
+                        <a href="Unregisterd-History.aspx">History</a>
+                        <a href="Unregisterd-Space and Universe.aspx">Space and Universe</a>
+						<a href="Unregisterd-Animals and Plants.aspx">Animals and Plants</a>
                         </div>
                         </div></div>
 						

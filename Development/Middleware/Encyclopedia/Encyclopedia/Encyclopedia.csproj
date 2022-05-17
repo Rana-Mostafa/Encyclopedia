@@ -178,7 +178,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="History.aspx" />
-    <Content Include="HomeE.aspx" />
+    <Content Include="Home Page.aspx" />
     <Content Include="Images\Australian superb fairy-wrens.jpg" />
     <Content Include="Images\china.jpg" />
     <Content Include="Images\download.jpg" />
@@ -244,6 +244,7 @@
     <Content Include="Space and Universe.aspx" />
     <Content Include="Upload Record.aspx" />
     <Content Include="Upload Video.aspx" />
+    <Content Include="View Content.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -339,12 +340,12 @@
     <Compile Include="History.aspx.designer.cs">
       <DependentUpon>History.aspx</DependentUpon>
     </Compile>
-    <Compile Include="HomeE.aspx.cs">
-      <DependentUpon>HomeE.aspx</DependentUpon>
+    <Compile Include="Home Page.aspx.cs">
+      <DependentUpon>Home Page.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="HomeE.aspx.designer.cs">
-      <DependentUpon>HomeE.aspx</DependentUpon>
+    <Compile Include="Home Page.aspx.designer.cs">
+      <DependentUpon>Home Page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -402,6 +403,13 @@
     </Compile>
     <Compile Include="Upload Video.aspx.designer.cs">
       <DependentUpon>Upload Video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Content.aspx.cs">
+      <DependentUpon>View Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Content.aspx.designer.cs">
+      <DependentUpon>View Content.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

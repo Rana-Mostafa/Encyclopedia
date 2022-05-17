@@ -19,10 +19,10 @@
     <form id="form1" runat="server">
        <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
 			<div class="container-fluid">
-				<a class="navbar-brand fs-2" href="HomeE.aspx" target="_top">Encyclopedia</a>
+				<a class="navbar-brand fs-2" href="Home Page.aspx" target="_top">Encyclopedia</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
+						<a class="nav-link fs-5" href="Home Page.aspx" target="_top"><h5 id="ho">Home</h5></a>
 						
 						<div class="nav-link fs-5"> 
 						<div class="dropdown">
@@ -38,22 +38,15 @@
 						<div class="nav-link fs-5"> <div class="dropdown">
                         <button class="dropbtn">Categories</button>
                         <div class="dropdown-content">
-                        <a href="Birds and Parrots.aspx">Birds and Parrots</a>
-                        <a href="History.aspx">History</a>
-                        <a href="Space and Universe.aspx">Space and Universe</a>
-						<a href="Animals and Plants.aspx">Animals and Plants</a>
+                        <!--<a href="Birds and Parrots.aspx">Birds and Parrots</a>-->
+						<asp:LinkButton ID="Birds" class="linkstyle" runat="server" OnClick="Birds_Click"> Birds and Parrots</asp:LinkButton>
+						<asp:LinkButton ID="History" class="linkstyle" runat="server" OnClick="History_Click"> History</asp:LinkButton>
+						<asp:LinkButton ID="Space" class="linkstyle" runat="server" OnClick="Space_Click"> Space and Universe</asp:LinkButton>
+						<asp:LinkButton ID="Animals" class="linkstyle" runat="server" OnClick="Animals_Click">Animals and Plants</asp:LinkButton>
                         </div>
-                        </div></div>
-						
-	<asp:DropDownList id="Notifications" runat="server" Class="NF">
-							
-						</asp:DropDownList>
-						
-						<a class="nav-link fs-5"> <img src="Images/Notification.png" width="25" height="25">
-						</a>
-						
+                        </div></div>						
 					</div>
-					<asp:Button ID="FollowBtn" class="button2" runat="server" Text="Follow" align="center"/>
+					
 				</div>
 			</div>
 		</nav>

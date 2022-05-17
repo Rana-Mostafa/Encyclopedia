@@ -19,10 +19,10 @@
     <form id="form1" runat="server">
         <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
 			<div class="container-fluid">
-				<a class="navbar-brand fs-2" href="HomeE.aspx" target="_top">Encyclopedia</a>
+				<a class="navbar-brand fs-2" href="Home Page.aspx" target="_top">Encyclopedia</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
+						<a class="nav-link fs-5" href="Home Page.aspx" target="_top"><h5 id="ho">Home</h5></a>
 						
 					<div class="nav-link fs-5"> 
 						<div class="dropdown">

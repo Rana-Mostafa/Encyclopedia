@@ -11,90 +11,90 @@ namespace Encyclopedia
 {
     public partial class Space_and_Universe : System.Web.UI.Page
     {
-        public static int UserID;
-        public static int CatID;
+
+        MySqlConnection connection = new MySqlConnection("datasource=10.145.0.233;port=3306;username=user;password=123456");
         MySqlCommand command;
         MySqlDataReader mdr;
-        static string connstring = "datasource=10.145.0.233;port=3306;username=user;password=123456;database=encyclopedia;";
-        MySqlConnection connection = new MySqlConnection(connstring);
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Date = "";
-            var followedCat = new Dictionary<int, string>();
-            UserID = 16;
-            CatID = 3;
+            var CatID = 0;
+            CatID = int.Parse(Request.QueryString["CATID"]);
+            MessageBox.Show(CatID.ToString());
+            var UserID = 0;
+            UserID = int.Parse(Request.QueryString["USERID"]);
+            MessageBox.Show(UserID.ToString());
             connection.Open();
-            string selectQuery = string.Format("SELECT LoginDate FROM user WHERE UserID = {0};", UserID);
-            command = new MySqlCommand(selectQuery, connection);
-            mdr = command.ExecuteReader();
-            if (mdr.Read())
-            {
-                string logindate = mdr.GetString(0);
-                Date = logindate.Substring(0, 9);
-            }
-            mdr.Close();
 
-            string selectQuery1 = string.Format("SELECT user_category.CategoryID, category.type FROM user_category INNER join category on user_category.CategoryID = category.CategoryID WHERE user_category.UserID = {0};", UserID);
-            command = new MySqlCommand(selectQuery1, connection);
+        }
+
+        protected void Birds_Click(object sender, EventArgs e)
+        {
+            var UserID = 0;
+            UserID = int.Parse(Request.QueryString["USERID"]);
+            var CatID = 0;
+            string selectQuery = "SELECT CategoryID FROM encyclopedia.category WHERE type = 'Birds and Parrots' ;";
+            command = new MySqlCommand(selectQuery, connection);
             mdr = command.ExecuteReader();
             while (mdr.Read())
             {
-                followedCat.Add(mdr.GetInt32(0), mdr.GetString(1));
+                CatID = int.Parse(mdr[0].ToString());
             }
             mdr.Close();
-
-            string selectQuery2 = string.Format("Select article.Name,content.categoryID from article INNER join content on article.ContentID = content.ContentID WHERE PublishedDate > '{0}';", Date);
-            command = new MySqlCommand(selectQuery2, connection);
-            mdr = command.ExecuteReader();
-            if (mdr.HasRows)
-                Notifications.Items.Add("New Articles are Added");
-            while (mdr.Read())
-            {
-                if (followedCat.ContainsKey(mdr.GetUInt16(1)))
-                {
-                    Notifications.Items.Add("New Article added to " + followedCat[mdr.GetUInt16(1)] + " titled: " + mdr.GetString(0));
-                }
-            }
-            mdr.Close();
+            Response.Redirect("Birds and Parrots.aspx?CATID=" + CatID + "&USERID=" + UserID);
 
         }
 
-        protected void FollowBtn_Click(object sender, EventArgs e)
+        protected void History_Click(object sender, EventArgs e)
         {
-            followSpecificCategory();
-        }
-        protected void followSpecificCategory()
-        {
-            string selectQuery = "SELECT * FROM encyclopedia.user_category";
+            var UserID = 0;
+            UserID = int.Parse(Request.QueryString["USERID"]);
+            MessageBox.Show(UserID.ToString());
+            string selectQuery = "SELECT CategoryID FROM encyclopedia.category WHERE type = 'History' ;";
             command = new MySqlCommand(selectQuery, connection);
             mdr = command.ExecuteReader();
-
+            while (mdr.Read())
             {
+                int CatID = int.Parse(mdr[0].ToString());
+                Response.Redirect("History.aspx?CATID=" + CatID + "&USERID=" + UserID);
 
-                string connectionString = "datasource = 10.145.0.233; port=3306;username=user;password=123456;database=encyclopedia;";
-                string iquery = "INSERT INTO user_category(CategoryID,UserID) VALUES ("+ CatID + ","+ UserID+")";
-
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(iquery, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-
-                try
-                {
-                    databaseConnection.Open();
-                    MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                    databaseConnection.Close();
-                }
-                catch (Exception ex)
-                {
-                    // Show any error message.
-                    MessageBox.Show(ex.Message);
-                }
-
-                MessageBox.Show("followed category sucessfully");
             }
-
-            connection.Close();
+            mdr.Close();
         }
+
+        protected void Space_Click(object sender, EventArgs e)
+        {
+            var UserID = 0;
+            UserID = int.Parse(Request.QueryString["USERID"]);
+            MessageBox.Show(UserID.ToString());
+            var CatID = 0;
+            string selectQuery = "SELECT CategoryID FROM encyclopedia.category WHERE type = 'Space and Universe' ;";
+            command = new MySqlCommand(selectQuery, connection);
+            mdr = command.ExecuteReader();
+            while (mdr.Read())
+            {
+                CatID = int.Parse(mdr[0].ToString());
+            }
+            mdr.Close();
+            Response.Redirect("Space and Universe.aspx?CATID=" + CatID + "&USERID=" + UserID);
+        }
+
+        protected void Animals_Click(object sender, EventArgs e)
+        {
+            var UserID = 0;
+            UserID = int.Parse(Request.QueryString["USERID"]);
+            MessageBox.Show(UserID.ToString());
+            var CatID = 0;
+            string selectQuery = "SELECT CategoryID FROM encyclopedia.category WHERE type = 'Animal and Plants' ;";
+            command = new MySqlCommand(selectQuery, connection);
+            mdr = command.ExecuteReader();
+            while (mdr.Read())
+            {
+                CatID = int.Parse(mdr[0].ToString());
+            }
+            mdr.Close();
+            Response.Redirect("Animals and Plants.aspx?CATID=" + CatID + "&USERID=" + UserID);
+        }
+
     }
 }
