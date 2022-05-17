@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Birds and Parrots.aspx.cs" Inherits="Encyclopedia.Birds_and_Parrots" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Upload Record.aspx.cs" Inherits="Encyclopedia.Upload_Record" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title> Birds and Parrots </title>
+        <title>Upload Record </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="CSS\Categories.css">
@@ -17,16 +17,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
-       <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
+        <nav class="navbar navbar-expand-lg navbar-light background-color: NONE;">
 			<div class="container-fluid">
 				<a class="navbar-brand fs-2" href="HomeE.aspx" target="_top">Encyclopedia</a>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
 						
-						<div class="nav-link fs-5"> 
+					<div class="nav-link fs-5"> 
 						<div class="dropdown">
-                        <button class="dropbtn">Post</button> 
+                        <div class="dropbtn">Post</div> 
                         <div class="dropdown-content">
                         <a href="Publish Article.aspx">Publish Article</a>
                         <a href="Upload Video.aspx">Upload Video</a>
@@ -34,9 +34,8 @@
                         </div>
                         </div></div>
 						
-						
 						<div class="nav-link fs-5"> <div class="dropdown">
-                        <button class="dropbtn">Categories</button>
+                        <div class="dropbtn">Categories</div>
                         <div class="dropdown-content">
                         <a href="Birds and Parrots.aspx">Birds and Parrots</a>
                         <a href="History.aspx">History</a>
@@ -45,77 +44,47 @@
                         </div>
                         </div></div>
 						
-	<asp:DropDownList id="Notifications" runat="server" Class="NF">
-							
-						</asp:DropDownList>
-						
-						<a class="nav-link fs-5"> <img src="Images/Notification.png" width="25" height="25">
-						</a>
-						
-					</div>
-					<asp:Button ID="FollowBtn" class="button2" runat="server" Text="Follow" align="center"/>
-				</div>
-			</div>
-		</nav>
-		
-		<center>
-			<div class="card-deck">
-				<div class="card">
-					<img class="card-img-top" src="Images/max.png" alt="parrot1">
-					<div class="card-body">
-					
-						<h5 class="card-title">White Parrot</h5>
-						<p class="card-text text-left">Parrots are beautiful birds features strong curved bill and there are roughly 398 species found worldwide. The family includes macaw, parrot, cockatoo, Parakeet, lorikeet, lory, Rosella and Galah, Hers is the list of 21 most colorful parrot species found in the world.</p>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="Images/ma2.jpg" alt="parrot2">
-					<div class="card-body">
-						<h5 class="card-title">Black Parrot</h5>
-						<p class="card-text text-left">The Seychelles black parrot, 
-							Praslin parrot or kato nwar is a sombre-coloured, medium-sized 
-							parrot endemic to the Seychelles.<span id="dots">...</span><span id="more">
-						Historically, it has been treated as a subspecies of the lesser vasa 
-								parrot, although it shows behavioural differences</span></p>
-                        <button onclick="myFunction()" id="myBtn">Read more</button>
-						
-						
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="Images/Parrot cute.jpg" alt="parrot3">
-					<div class="card-body">
-						<h5 class="card-title">Green Parrot</h5>
-						<p class="card-text text-left">The rose-ringed parakeet, also known as the ring-necked parakeet, is a medium-sized parrot in the genus Psittacula, of the family Psittacidae.</p>
 					</div>
 					
 				</div>
 				
 			</div>
 			
-			<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+		</nav>
+	<div align="center">	
+		<label for="categories">Choose Categorey:</label>
+<asp:DropDownList name="categories" id="categorey" runat="server">
+</asp:DropDownList>
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-}
-            </script>
-			
-		</center>
+		
+
+ <form action="/url" method="GET">
+
+	 <div>
+            <br />
+            Name<asp:TextBox ID="audioname" runat="server"></asp:TextBox>
+            <br />
+        </div>
+        <asp:FileUpload ID="FileUpload1" runat="server" style="margin-top: 0px" />
+      
+        
+        
+		
+    </form>
+	
+	
+<div id="outer">
+
+	<asp:Button ID="PostBtn" class="inner" runat="server" Text="Upload Record" align="center" OnClick="PostBtn_Click"/>	
+</div>	
+		</div> 
+			<!-- /END THE FEATURETTES -->
+		
 		<div class="container">
 			<footer class="py-1 my-3 border-top" >
 				<div class="d-flex justify-content-between py-1">
 					<p>&copy; 2022 ITI, Org. All rights reserved.</p>
+					
 				</div>
 			</footer>
 		</div>

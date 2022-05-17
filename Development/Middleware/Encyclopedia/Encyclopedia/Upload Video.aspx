@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Animals and Plants.aspx.cs" Inherits="Encyclopedia.Animals_and_Plants" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Upload Video.aspx.cs" Inherits="Encyclopedia.Upload_Video" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <title>Animals and Plants </title>
+      <title> Ensyclopedia </title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="CSS\Categories.css">
@@ -24,18 +24,17 @@
 					<div class="navbar-nav">
 						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
 						
-						<div class="nav-link fs-5"> 
+					<div class="nav-link fs-5"> 
 						<div class="dropdown">
-                        <div class="dropbtn">Post</div>
+                        <div class="dropbtn">Post</div> 
                         <div class="dropdown-content">
-
                         <a href="Publish Article.aspx">Publish Article</a>
                         <a href="Upload Video.aspx">Upload Video</a>
                         <a href="Upload Record.aspx">Upload Record</a>
                         </div>
                         </div></div>
 						
-						<a class="nav-link fs-5"> <div class="dropdown">
+						<div class="nav-link fs-5"> <div class="dropdown">
                         <div class="dropbtn">Categories</div>
                         <div class="dropdown-content">
                         <a href="Birds and Parrots.aspx">Birds and Parrots</a>
@@ -43,74 +42,49 @@
                         <a href="Space and Universe.aspx">Space and Universe</a>
 						<a href="Animals and Plants.aspx">Animals and Plants</a>
                         </div>
-                        </div></a>
+                        </div></div>
 						
-<asp:DropDownList id="Notifications" runat="server" Class="NF">
-							
-						</asp:DropDownList>		
-						
-						<a class="nav-link fs-5"> <img src="Images/Notification.png" width="25" height="25">
-						
-						</a>
-					</div>
-					<asp:Button ID="FollowBtn" class="button2" runat="server" Text="Follow" align="center" OnClick="FollowBtn_Click"/>
-				</div>
-			</div>
-		</nav>
-		
-		<center>
-			<div class="card-deck">
-				<div class="card">
-					<img class="card-img-top" src="Images/owl1.jpg" alt="Owl1">
-					<div class="card-body">
-					
-						<h5 class="card-title">Owl</h5>
-						<p class="card-text text-left">Owls are impressive predators. They possess huge eyes, 2.2 times larger than other bird species of their size, improving their ability to see in the dark. Despite this, owls are farsighted, so have bristles around their beak to help detect close objects.</p>
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="Images/girrafs.jpg" alt="giraffe">
-					<div class="card-body">
-						<h5 class="card-title">Giraffe</h5>
-						<p class="card-text text-left">The giraffe's chief distinguishing characteristics are its extremely long neck and legs, its horn-like ossicones, and its spotted coat patterns. It is classified under the family Giraffidae<span id="dots">...</span><span id="more">
-						along with its closest extant relative</span></p>
-                        <button onclick="myFunction()" id="myBtn">Read more</button>     
-					</div>
-				</div>
-				<div class="card">
-					<img class="card-img-top" src="Images/lilac.jpg" alt="Lilac">
-					<div class="card-body">
-						<h5 class="card-title">Lilac</h5>
-						<p class="card-text text-left">The common lilac, Syringa vulgaris, is well-loved for its toughness, reliability, and fragrance. In fact, lilacs are so tough that they can grow for 100+ years, often outliving the homes they were planted around.</p>
 					</div>
 					
 				</div>
 				
 			</div>
 			
-			<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+		</nav>
+	<div align="center">	
+		<label for="categories">Choose Categorey:</label>
+<asp:DropDownList name="categories" id="categorey" runat="server">
+</asp:DropDownList>
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less"; 
-    moreText.style.display = "inline";
-  }
-}
-            </script>
-			
-		</center>
+		
+
+ <form action="/url" method="GET">
+
+	 <div>
+            <br />
+            Name<asp:TextBox ID="vedioname" runat="server"></asp:TextBox>
+            <br />
+        </div>
+        <asp:FileUpload ID="FileUpload1" runat="server" style="margin-top: 0px" />
+      
+        
+        
+		
+    </form>
+	
+	
+<div id="outer">
+
+	<asp:Button ID="PostBtn" class="inner" runat="server" Text="Upload Video" align="center" OnClick="PostBtn_Click"/>	
+</div>	
+		</div> 
+			<!-- /END THE FEATURETTES -->
+		
 		<div class="container">
 			<footer class="py-1 my-3 border-top" >
 				<div class="d-flex justify-content-between py-1">
 					<p>&copy; 2022 ITI, Org. All rights reserved.</p>
+					
 				</div>
 			</footer>
 		</div>

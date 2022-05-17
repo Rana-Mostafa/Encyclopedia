@@ -11,7 +11,7 @@ namespace Encyclopedia
 {
 
 
-    public partial class Birds_and_Parrots
+    public partial class Publish_Article1
     {
 
         /// <summary>
@@ -24,21 +24,39 @@ namespace Encyclopedia
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Notifications control.
+        /// categorey control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Notifications;
+        protected global::System.Web.UI.WebControls.DropDownList categorey;
 
         /// <summary>
-        /// FollowBtn control.
+        /// ArtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FollowBtn;
+        protected global::System.Web.UI.WebControls.TextBox ArtName;
+
+        /// <summary>
+        /// ArtContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea ArtContent;
+
+        /// <summary>
+        /// PostBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PostBtn;
     }
 }
