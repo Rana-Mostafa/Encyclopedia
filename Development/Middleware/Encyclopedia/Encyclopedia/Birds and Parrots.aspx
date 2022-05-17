@@ -23,7 +23,8 @@
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
 						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="ho">Home</h5></a>
-						<a class="nav-link fs-5" href="HomeE.aspx" target="_top"><h5 id="lo">Logout</h5></a>
+						<a class="nav-link fs-5" href="Login.aspx" target="_top"><h5 id="lo">Login</h5></a>
+						<a class="nav-link fs-5" href="Signup.aspx" target="_top"><h5 id="su">Signup</h5></a>
 						
 						<div class="nav-link fs-5"> 
 						<div class="dropdown">
@@ -46,8 +47,18 @@
                         </div>
                         </div></div>
 						
+						<select name="dog-names" id="NF">
+  <option value="rigatoni">Notification</option>
+  <option value="dave">Publish Article</option>
+  <option value="pumpernickel">Upload Video</option>
+  <option value="reeses">Upload Record</option>
+</select>
+						
+						<a class="nav-link fs-5"> <img src="Images/Notification.png" width="25" height="25">
+						</a>
 						
 					</div>
+					<asp:Button ID="FollowBtn" class="button2" OnClick ="FollowBtn_Click" runat="server" Text="Follow" align="center"/>
 				</div>
 			</div>
 		</nav>
@@ -66,13 +77,13 @@
 					<img class="card-img-top" src="Images/ma2.jpg" alt="parrot2">
 					<div class="card-body">
 						<h5 class="card-title">Black Parrot</h5>
-						<p class="card-text text-left">The Seychelles black parrot, 
+						<asp:Label ID="PartOfArticle" runat="server" Text="Label"></asp:Label>
+						<!--<p class="card-text text-left">The Seychelles black parrot, 
 							Praslin parrot or kato nwar is a sombre-coloured, medium-sized 
 							parrot endemic to the Seychelles.<span id="dots">...</span><span id="more">
 						Historically, it has been treated as a subspecies of the lesser vasa 
-								parrot, although it shows behavioural differences</span></p>
-                        <button onclick="myFunction()" id="myBtn">Read more</button>
-						
+								parrot, although it shows behavioural differences</span></p>-->
+						<asp:Button ID="Button1" runat="server" Text="View Content" OnClick="Button1_Click" />
 						
 					</div>
 				</div>

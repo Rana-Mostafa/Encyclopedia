@@ -25,7 +25,7 @@
 				</div>
 			
 				<div class="input-form">
-					<asp:Button ID="LoginBtn" runat="server" Text="Login" href="Home Page.aspx" required OnClick="LoginBtn_Click"/> 
+					<asp:Button ID="LoginBtn" runat="server" Text="Login" required OnClick="LoginBtn_Click"/> 
 				</div>
 				<div class="input-form">
 					<asp:Button ID="signupBtn" runat="server" Text="SignUp" required OnClick="signupBtn_Click1"/> 

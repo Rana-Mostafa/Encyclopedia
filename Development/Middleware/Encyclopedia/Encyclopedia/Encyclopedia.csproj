@@ -151,9 +151,7 @@
     <Content Include="Admin-Birds and Parrots.aspx" />
     <Content Include="Admin-Delete.aspx" />
     <Content Include="Admin-History.aspx" />
-    <Content Include="Admin-Home Page.aspx" />
     <Content Include="Admin-Home.aspx" />
-    <Content Include="Admin-login.aspx" />
     <Content Include="Admin-Plants and Animals.aspx" />
     <Content Include="Admin-Space and Universe.aspx" />
     <Content Include="Animals and Plants.aspx" />
@@ -180,7 +178,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="History.aspx" />
-    <Content Include="Home Page.aspx" />
     <Content Include="HomeE.aspx" />
     <Content Include="Images\Australian superb fairy-wrens.jpg" />
     <Content Include="Images\china.jpg" />
@@ -245,6 +242,7 @@
     <Content Include="Signup.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Space and Universe.aspx" />
+    <Content Include="View Content.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -272,26 +270,12 @@
     <Compile Include="Admin-History.aspx.designer.cs">
       <DependentUpon>Admin-History.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin-Home Page.aspx.cs">
-      <DependentUpon>Admin-Home Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin-Home Page.aspx.designer.cs">
-      <DependentUpon>Admin-Home Page.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin-Home.aspx.cs">
       <DependentUpon>Admin-Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin-Home.aspx.designer.cs">
       <DependentUpon>Admin-Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin-login.aspx.cs">
-      <DependentUpon>Admin-login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin-login.aspx.designer.cs">
-      <DependentUpon>Admin-login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin-Plants and Animals.aspx.cs">
       <DependentUpon>Admin-Plants and Animals.aspx</DependentUpon>
@@ -354,13 +338,6 @@
     <Compile Include="History.aspx.designer.cs">
       <DependentUpon>History.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home Page.aspx.cs">
-      <DependentUpon>Home Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home Page.aspx.designer.cs">
-      <DependentUpon>Home Page.aspx</DependentUpon>
-    </Compile>
     <Compile Include="HomeE.aspx.cs">
       <DependentUpon>HomeE.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -410,6 +387,13 @@
     </Compile>
     <Compile Include="Space and Universe.aspx.designer.cs">
       <DependentUpon>Space and Universe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View Content.aspx.cs">
+      <DependentUpon>View Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View Content.aspx.designer.cs">
+      <DependentUpon>View Content.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
