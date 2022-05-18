@@ -108,6 +108,7 @@
     <Content Include="About.aspx" />
     <Content Include="Admin-Birds and Parrots.aspx" />
     <Content Include="Admin-Delete.aspx" />
+    <Content Include="Admin-DeleteUser.aspx" />
     <Content Include="Admin-History.aspx" />
     <Content Include="Admin-Home.aspx" />
     <Content Include="Admin-Plants and Animals.aspx" />
@@ -226,6 +227,13 @@
     </Compile>
     <Compile Include="Admin-Delete.aspx.designer.cs">
       <DependentUpon>Admin-Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-DeleteUser.aspx.cs">
+      <DependentUpon>Admin-DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-DeleteUser.aspx.designer.cs">
+      <DependentUpon>Admin-DeleteUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin-History.aspx.cs">
       <DependentUpon>Admin-History.aspx</DependentUpon>
