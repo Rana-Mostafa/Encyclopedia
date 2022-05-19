@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2022 at 08:44 PM
+-- Generation Time: May 19, 2022 at 11:26 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -53,6 +53,7 @@ CREATE TABLE `article` (
   `Name` varchar(50) NOT NULL,
   `ArticleContent` mediumtext NOT NULL,
   `Language` varchar(30) NOT NULL,
+  `PublishedDate` varchar(60) NOT NULL,
   `ContentID` int(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -60,8 +61,10 @@ CREATE TABLE `article` (
 -- Dumping data for table `article`
 --
 
-INSERT INTO `article` (`ArticleID`, `Name`, `ArticleContent`, `Language`, `ContentID`) VALUES
-(6, 'xx', 'HiHiHiHiHiHiHiHiHiHiHi', 'English', 1);
+INSERT INTO `article` (`ArticleID`, `Name`, `ArticleContent`, `Language`, `PublishedDate`, `ContentID`) VALUES
+(16, 'Birds Facts', 'Birds are vertebrate animals adapted for flight.\r\n\r\nMany can also run, jump, swim, and dive. Some, like penguins, have lost the ability to fly but retained their wings. Birds are found worldwide and in all habitats. The largest is the nine-foot-tall ostrich. The smallest is the two-inch-long bee hummingbird.\r\n\r\nEverything about the anatomy of a bird reflects its ability to fly. The wings, for example, are shaped to create lift. The leading edge is thicker than the back edge, and they are covered in feathers that narrow to a point. Airplane wings are modeled after bird wings.\r\n\r\nThe bones and muscles of the wing are also highly specialized. The main bone, the humerus, which is similar to the upper arm of a mammal, is hollow instead of solid. It also connects to the bird’s air sac system, which, in turn, connects to its lungs. The powerful flight muscles of the shoulder attach to the keel, a special ridge of bone that runs down the center of the wide sternum, or breastbone. The tail feathers are used for steering.\r\n\r\nBirds have a unique digestive system that allows them to eat when they can—usually on the fly—and digest later. They use their beaks to grab and swallow food. Even the way a bird reproduces is related to flight. Instead of carrying the extra weight of developing young inside their bodies, they lay eggs and incubate them in a nest.\r\n\r\nThe fossil record shows that birds evolved alongside the dinosaurs during the Jurassic period 160 million years ago. The best known fossil is archaeopteryx, which was about the size of a crow.', 'English', '14/5/2022', 2),
+(17, 'Parrots Facts', 'The parrots are a broad order of more than 350 birds. Macaws, Amazons, lorikeets, lovebirds, cockatoos and many others are all considered parrots.\n\nShared Traits\nThough there is great diversity among these birds, there are similarities as well. All parrots have curved beaks and all are zygodactyls, meaning they have four toes on each foot, two pointing forward and two projecting backward. Most parrots eat fruit, flowers, buds, nuts, seeds, and some small creatures such as insects.\n\nParrots are found in warm climates all over most of the world. The greatest diversities exist in Australasia, Central America, and South America.\n\nPopularity as Pets\nMany parrots are kept as pets, especially macaws, Amazon parrots, cockatiels, parakeets, and cockatoos. These birds have been popular companions throughout history because they are intelligent, charismatic, colorful, and musical. Some birds can imitate many nonavian sounds, including human speech. The male African gray parrot (Psittacus erithacus) is the most accomplished user of human speech in the animal world; this rain forest-dweller is an uncanny mimic.', 'English', '5/14/2022 1:42:58 PM', 4),
+(18, 'Cockatiels Birds', 'There’s a reason why the cockatiel is one of the most popular companion birds — this slender Australian parrot can be both cuddly and bold. Cockatiels can also be curious and, at times, feisty. With a cockatiel in the house, you are likely to hear a repertoire of chirps and whistles.Cuddly, outgoing and comical are just three reasons why the cockatiel is the No. 1 pet bird in America. Cockatiels are also talented whistlers, and male cockatiels in particular are known for their whistle serenades, which can be directed at their favored person, their favorite object or their mirror reflection. When not whistling or keeping themselves busy foraging for food and fun around the cage, cockatiels often enjoy spending their downtime snuggling on their favored person’s shoulder. A healthy, well-socialized cockatiel can make a great family pet and is also ideal for apartment living.Cockatiels are native to the semi-arid regions of Australia. This open environment might be a reason why cockatiels don’t have the ear-piercing screech of parrots originating from dense rain-forest habitats. Wild cockatiels fly to the ground to forage for food. Cockatiels readily breed in the wild, and they are also easy to breed in captivity, which makes them widely available as pets at a lower cost than most other parrot species. Wild cockatiels are always on alert for predators and are light sleepers. A pet cockatiel might have an occasional night-fright episode, where it thrashes around the cage at night as if startled. You can help your cockatiel find its way back to its perch by leaving a night light on in its room.', 'English', '5/14/2022 1:44:25 PM', 5);
 
 -- --------------------------------------------------------
 
@@ -103,7 +106,15 @@ CREATE TABLE `content` (
 --
 
 INSERT INTO `content` (`ContentID`, `name`, `UserID`, `CategoryID`, `AdminID`) VALUES
-(1, 'xx', 16, 222, NULL);
+(1, 'xxx', 16, 1, NULL),
+(2, 'Birds Facts', 16, 2, NULL),
+(3, 'A1', 16, 2, NULL),
+(4, 'Parrots Facts', 16, 2, NULL),
+(5, 'Cockatiels Birds', 16, 2, NULL),
+(6, 'S&U', 16, 3, NULL),
+(7, 'S&U', 16, 3, NULL),
+(8, 'S&U', 16, 3, NULL),
+(9, 'A&P', 16, 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -126,7 +137,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`UserID`, `Username`, `Email`, `password`, `AdminID`, `LoginDate`) VALUES
 (2, 'maio', 'raven.radwa@gmail.com', '12345678', NULL, ''),
-(16, 'saadsaad', 'saad@saad.saad', 'saadsaad', NULL, '5/12/2022 6:40:33 PM'),
+(16, 'saadsaad', 'saad@saad.saad', 'saadsaad', NULL, '5/17/2022 7:02:52 PM'),
 (111, 'FatmaMekhemer', 'fatmamekhemer999@hotmail.com', '123456', 1, '');
 
 -- --------------------------------------------------------
@@ -139,6 +150,15 @@ CREATE TABLE `user_category` (
   `UserID` int(20) NOT NULL,
   `CategoryID` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_category`
+--
+
+INSERT INTO `user_category` (`UserID`, `CategoryID`) VALUES
+(16, 1),
+(16, 3),
+(16, 4);
 
 -- --------------------------------------------------------
 
@@ -159,7 +179,9 @@ CREATE TABLE `video` (
 --
 
 INSERT INTO `video` (`VideoID`, `VideoName`, `VideoContent`, `Resolution`, `ContentID`) VALUES
-(2002, '', 0x4661746d6161612e6d7034, '', 1);
+(1, 'xxx', 0x4661746d6161612e6d7034, ' ', 1),
+(2, 'xxxx', 0x4661746d6161612e6d7034, ' ', 2),
+(3, 'A&P', 0x4661746d6161612e6d7034, ' ', 9);
 
 -- --------------------------------------------------------
 
@@ -180,7 +202,8 @@ CREATE TABLE `voice_rec` (
 --
 
 INSERT INTO `voice_rec` (`VoiceRecID`, `VoiceRecName`, `VoiceContent`, `Player_Type`, `ContentID`) VALUES
-(2002, '', 0x316d696e26327365632e6d7033, '', 1);
+(1, 'A1', 0x35392e6d7033, ' ', 3),
+(2, 'S&U', 0x35392e6d7033, ' ', 8);
 
 --
 -- Indexes for dumped tables
@@ -257,7 +280,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-  MODIFY `ArticleID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ArticleID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `video`
