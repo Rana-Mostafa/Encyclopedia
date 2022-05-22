@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin-History.aspx.cs" Inherits="Encyclopedia.Admin_History" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin-DeleteUser.aspx.cs" Inherits="Encyclopedia.Admin_DeleteUser" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>History</title>
+    <title>Ensyclopedia </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="CSS/Categories.css">
@@ -14,15 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-
-    <style>
-        #Del {
-            font-family: 'Baloo Bhaijaan 2', 'cursive';
-            font-size: 1.5rem;
-            color: #6a6b6e;
-            padding-top: 4px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -54,6 +45,7 @@
                                 </button>
                                 <div class="dropdown-content">
                                     <asp:LinkButton ID="Birds" class="linkstyle" runat="server" OnClick="Birds_Click"> Birds and Parrots</asp:LinkButton>
+                                    <asp:LinkButton ID="History" class="linkstyle" runat="server" OnClick="History_Click"> History</asp:LinkButton>
                                     <asp:LinkButton ID="Space" class="linkstyle" runat="server" OnClick="Space_Click"> Space and Universe</asp:LinkButton>
                                     <asp:LinkButton ID="Animals" class="linkstyle" runat="server" OnClick="Animals_Click">Animals and Plants</asp:LinkButton>
                                 </div>
@@ -67,54 +59,20 @@
             </div>
         </nav>
 
+        <div align="center">
 
-        <center>
-            <style>
-                .card-title {
-                    float: left;
-                }
 
-                .card-btn {
-                    float: right;
-                }
 
-                .card-body {
-                    height: 80px;
-                }
-            </style>
-            <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src="Images/rwZNcR.jpg" alt="parrot1">
-                    <div class="card-body">
+            <form action="/url" method="GET">
+                <asp:TextBox type="text" placeholder="User Name" ID="username" runat="server" />
+                <asp:TextBox type="text" placeholder="Email" ID="useremail" runat="server" />
+            </form>
 
-                        <asp:Label CssClass="card-title" ID="firsttitle" runat="server"></asp:Label>
-                        <asp:Button ID="Card1" runat="server" OnClick="ReadMoreBTn" Text="Read more" CssClass="card-btn" />
-
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="Images/history3.jpg" alt="parrot2">
-                    <div class="card-body">
-                        <asp:Label CssClass="card-title" ID="middletitle" runat="server"></asp:Label>
-                        <asp:Button ID="Card2" runat="server" OnClick="ReadMoreBTn" Text="Read more" CssClass="card-btn" />
-                    </div>
-                </div>
-                <div class="card">
-                    <img class="card-img-top" src="Images/china.jpg" alt="parrot3">
-                    <div class="card-body">
-                        <asp:Label CssClass="card-title" ID="lasttitle" runat="server"></asp:Label>
-                        <asp:Button ID="Card3" runat="server" OnClick="ReadMoreBTn" Text="Read more" CssClass="card-btn" />
-
-                    </div>
-
-                </div>
-
+            <div id="outer">
+                <asp:Button ID="DeleteBtn" class="inner" runat="server" Text="Delete" align="center" OnClick="DeleteBtn_Click" />
             </div>
-
-
-
-        </center>
-
+        </div>
+        <!-- /END THE FEATURETTES -->
 
         <div class="container">
             <footer class="py-1 my-3 border-top" style="position: absolute; bottom: 0; width: 80%">
@@ -123,6 +81,7 @@
                 </div>
             </footer>
         </div>
+    </form>
     </form>
 </body>
 </html>

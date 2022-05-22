@@ -11,7 +11,7 @@ namespace Encyclopedia
 {
 
 
-    public partial class Admin_Delete
+    public partial class Admin_DeleteUser
     {
 
         /// <summary>
@@ -105,39 +105,30 @@ namespace Encyclopedia
         protected global::System.Web.UI.WebControls.LinkButton logoutBtn;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
-        /// contentID control.
+        /// useremail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contentID;
+        protected global::System.Web.UI.WebControls.TextBox useremail;
 
         /// <summary>
-        /// contentName control.
+        /// DeleteBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox contentName;
-
-        /// <summary>
-        /// FollowBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button FollowBtn;
+        protected global::System.Web.UI.WebControls.Button DeleteBtn;
     }
 }

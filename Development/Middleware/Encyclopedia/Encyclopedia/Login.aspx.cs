@@ -11,7 +11,8 @@ namespace Encyclopedia
 {
     public partial class Login : System.Web.UI.Page
     {
-        MySqlConnection connection = new MySqlConnection("datasource=10.145.0.233;port=3306;username=user;password=123456");
+        static string connstring = "datasource = 127.0.0.1; port=3306;username=root;password=123456;database=encyclopedia;";
+        MySqlConnection connection = new MySqlConnection(connstring);
         MySqlCommand command;
         MySqlDataReader mdr;
         protected void Page_Load(object sender, EventArgs e)
@@ -35,10 +36,9 @@ namespace Encyclopedia
                 mdr = command.ExecuteReader();
                 if (mdr.Read())
                 {
-                    string MyConnection2 = "datasource=10.145.0.233;port=3306;username=user;password=123456";
                     Session["LoginDate"] = DateTime.Now.ToString();
                     string Query = "update encyclopedia.user set LoginDate='" + Session["LoginDate"] + "' where Username='" + UserName.Text + "';";
-                    MySqlConnection MyConn2 = new MySqlConnection(MyConnection2);
+                    MySqlConnection MyConn2 = new MySqlConnection(connstring);
 
                     MySqlCommand MyCommand2 = new MySqlCommand(Query, MyConn2);
                     MySqlDataReader MyReader2;

@@ -150,6 +150,7 @@
     <Content Include="About.aspx" />
     <Content Include="Admin-Birds and Parrots.aspx" />
     <Content Include="Admin-Delete.aspx" />
+    <Content Include="Admin-DeleteUser.aspx" />
     <Content Include="Admin-History.aspx" />
     <Content Include="Admin-Home.aspx" />
     <Content Include="Admin-Plants and Animals.aspx" />
@@ -242,6 +243,11 @@
     <Content Include="Signup.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Space and Universe.aspx" />
+    <Content Include="Unregisterd-Animals and Plants.aspx" />
+    <Content Include="Unregisterd-Birds and Parrots.aspx" />
+    <Content Include="Unregisterd-History.aspx" />
+    <Content Include="Unregisterd-Home.aspx" />
+    <Content Include="Unregisterd-Space and Universe.aspx" />
     <Content Include="Upload Record.aspx" />
     <Content Include="Upload Video.aspx" />
     <Content Include="View Content.aspx" />
@@ -264,6 +270,13 @@
     </Compile>
     <Compile Include="Admin-Delete.aspx.designer.cs">
       <DependentUpon>Admin-Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin-DeleteUser.aspx.cs">
+      <DependentUpon>Admin-DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin-DeleteUser.aspx.designer.cs">
+      <DependentUpon>Admin-DeleteUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin-History.aspx.cs">
       <DependentUpon>Admin-History.aspx</DependentUpon>
@@ -389,6 +402,41 @@
     </Compile>
     <Compile Include="Space and Universe.aspx.designer.cs">
       <DependentUpon>Space and Universe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unregisterd-Animals and Plants.aspx.cs">
+      <DependentUpon>Unregisterd-Animals and Plants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unregisterd-Animals and Plants.aspx.designer.cs">
+      <DependentUpon>Unregisterd-Animals and Plants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unregisterd-Birds and Parrots.aspx.cs">
+      <DependentUpon>Unregisterd-Birds and Parrots.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unregisterd-Birds and Parrots.aspx.designer.cs">
+      <DependentUpon>Unregisterd-Birds and Parrots.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unregisterd-History.aspx.cs">
+      <DependentUpon>Unregisterd-History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unregisterd-History.aspx.designer.cs">
+      <DependentUpon>Unregisterd-History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unregisterd-Home.aspx.cs">
+      <DependentUpon>Unregisterd-Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unregisterd-Home.aspx.designer.cs">
+      <DependentUpon>Unregisterd-Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Unregisterd-Space and Universe.aspx.cs">
+      <DependentUpon>Unregisterd-Space and Universe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Unregisterd-Space and Universe.aspx.designer.cs">
+      <DependentUpon>Unregisterd-Space and Universe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Upload Record.aspx.cs">
       <DependentUpon>Upload Record.aspx</DependentUpon>

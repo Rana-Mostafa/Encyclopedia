@@ -11,7 +11,8 @@ namespace Encyclopedia
 {
     public partial class Signup : System.Web.UI.Page
     {
-        MySqlConnection connection = new MySqlConnection("datasource=10.145.0.233;port=3306;username=user;password=123456");
+        static string connstring = "datasource = 127.0.0.1; port=3306;username=root;password=123456;database=encyclopedia;";
+        MySqlConnection connection = new MySqlConnection(connstring);
         MySqlCommand command;
         MySqlDataReader mdr;
         protected void Page_Load(object sender, EventArgs e)
@@ -28,6 +29,23 @@ namespace Encyclopedia
             }
             else
             {
+                int userID = 0;
+                string selectQuery5 = string.Format("SELECT Max(UserID) from encyclopedia.user;");
+                command = new MySqlCommand(selectQuery5, connection);
+                mdr = command.ExecuteReader();
+                if (mdr.Read())
+                {
+                    if (mdr["Max(UserID)"] == DBNull.Value)
+                        userID = 1;
+
+                    else
+                    {
+                        userID = mdr.GetInt16(0);
+                        userID++;
+                    }
+                }
+                mdr.Close();
+
                 string selectQuery = "SELECT * FROM encyclopedia.user WHERE Username = '" + UserName.Text + "';";
                 command = new MySqlCommand(selectQuery, connection);
                 mdr = command.ExecuteReader();
@@ -51,10 +69,9 @@ namespace Encyclopedia
                         else
                         {
 
-                            string connectionString = "datasource=10.145.0.233;port=3306;username=user;password=123456;database=encyclopedia;";
-                            string iquery = "INSERT INTO user(Email,Username, Password,AdminID) VALUES ('" + Email.Text + "', '" + UserName.Text + "', '" + SignupPassword.Text + "',333)";
+                            string iquery = "INSERT INTO user(UserID,Email,Username, Password,AdminID) VALUES ('" + userID + "', '" + Email.Text + "', '" + UserName.Text + "', '" + SignupPassword.Text + "',1)";
 
-                            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                            MySqlConnection databaseConnection = new MySqlConnection(connstring);
                             MySqlCommand commandDatabase = new MySqlCommand(iquery, databaseConnection);
                             commandDatabase.CommandTimeout = 60;
 
@@ -63,6 +80,8 @@ namespace Encyclopedia
                                 databaseConnection.Open();
                                 MySqlDataReader myReader = commandDatabase.ExecuteReader();
                                 databaseConnection.Close();
+                                MessageBox.Show("Account Successfully Created!");
+                                Response.Redirect("Login.aspx");
                             }
                             catch (Exception ex)
                             {
@@ -70,8 +89,7 @@ namespace Encyclopedia
                                 MessageBox.Show(ex.Message);
                             }
 
-                            MessageBox.Show("Account Successfully Created!");
-                            Response.Redirect("Login.aspx");
+
 
                         }
 

@@ -217,3 +217,8 @@ a img:hover {
     padding-top: 4px;
 }
 
+.logout {
+    position:relative;
+    float:right;
+}
+
