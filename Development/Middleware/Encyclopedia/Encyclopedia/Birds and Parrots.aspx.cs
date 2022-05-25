@@ -27,18 +27,12 @@ namespace Encyclopedia
             command = new MySqlCommand(selectQuery, connection);
             mdr = command.ExecuteReader();
             mdr.Read();
+            firsttitle.Text = mdr[0].ToString();
+            mdr.Read();
             middletitle.Text = mdr[0].ToString();
             mdr.Read();
             lasttitle.Text = mdr[0].ToString();
-            mdr.Read();
-            firsttitle.Text = mdr[0].ToString();
             mdr.Close();
-
-
-
-
-
-
 
         }
 

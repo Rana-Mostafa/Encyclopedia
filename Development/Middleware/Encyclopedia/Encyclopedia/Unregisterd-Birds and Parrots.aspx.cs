@@ -25,11 +25,11 @@ namespace Encyclopedia
             command = new MySqlCommand(selectQuery, connection);
             mdr = command.ExecuteReader();
             mdr.Read();
+            firsttitle.Text = mdr[0].ToString();
+            mdr.Read();
             middletitle.Text = mdr[0].ToString();
             mdr.Read();
             lasttitle.Text = mdr[0].ToString();
-            mdr.Read();
-            firsttitle.Text = mdr[0].ToString();
             mdr.Close();
 
         }
@@ -110,8 +110,6 @@ namespace Encyclopedia
         }
         protected void ReadMoreBTn(object sender, EventArgs e)
         {
-            var UserID = 0;
-            UserID = int.Parse(Request.QueryString["USERID"]);
             var ArtName = "";
             System.Web.UI.WebControls.Label lbl;
             System.Web.UI.WebControls.Button btn = sender as System.Web.UI.WebControls.Button;
@@ -120,13 +118,13 @@ namespace Encyclopedia
                 case "Card1":
                     lbl = (System.Web.UI.WebControls.Label)form1.FindControl("firsttitle");
                     ArtName = lbl.Text;
-                    Response.Redirect("View Content.aspx?ArtName=" + ArtName + "&USERID=" + UserID);
+                    Response.Redirect("View Content.aspx?ArtName=" + ArtName);
                     break;
 
                 case "Card2":
                     lbl = (System.Web.UI.WebControls.Label)form1.FindControl("middletitle");
                     ArtName = lbl.Text;
-                    Response.Redirect("View Content.aspx?ArtName=" + ArtName + "&USERID=" + UserID);
+                    Response.Redirect("View Content.aspx?ArtName=" + ArtName);
                     break;
 
                 case "Card3":

@@ -18,7 +18,6 @@ namespace Encyclopedia
         {
             var ArtName = "";
             ArtName = Request.QueryString["ArtName"].ToString();
-            MessageBox.Show(ArtName);
             connection.Open();
             var ContentID = 0;
             var UserID = 0;
