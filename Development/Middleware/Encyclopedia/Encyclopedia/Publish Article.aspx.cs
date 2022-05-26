@@ -22,6 +22,7 @@ namespace Encyclopedia
             UserID = int.Parse(Request.QueryString["USERID"]);
             var CatID = 0;
             CatID = int.Parse(Request.QueryString["CATID"]);
+            categorey.Items.Clear();
             connection.Open();
             string selectQuery = string.Format("SELECT type FROM category;");
             command = new MySqlCommand(selectQuery, connection);
@@ -47,6 +48,7 @@ namespace Encyclopedia
             int ACatID = 0;
             string Language = "English";
             int ContentID = 0;
+            int AID = 0;
 
             if (AContent == "" || ATitle == "")
                 MessageBox.Show("Please enter all the required fields", "Error");
@@ -70,6 +72,22 @@ namespace Encyclopedia
                 }
                 mdr.Close();
 
+                string selectQuery5 = string.Format("SELECT Max(ArticleID) from article;");
+                command = new MySqlCommand(selectQuery5, connection);
+                mdr = command.ExecuteReader();
+                if (mdr.Read())
+                {
+                    if (mdr["Max(ArticleID)"] == DBNull.Value)
+                        AID = 1;
+
+                    else
+                    {
+                        AID = mdr.GetInt16(0);
+                        AID++;
+                    }
+                }
+                mdr.Close();
+
                 //CategoryID
                 string selectQuery1 = string.Format("SELECT CategoryID from category where type= '{0}';", categorey.SelectedItem.ToString());
                 command = new MySqlCommand(selectQuery1, connection);
@@ -83,21 +101,20 @@ namespace Encyclopedia
                 string selectQuery2 = string.Format("INSERT INTO `content`( `ContentID`,`name`, `UserID`, `CategoryID`) VALUES({0}, '{1}', {2},{3})", ContentID, ATitle, UserID, ACatID);
                 command = new MySqlCommand(selectQuery2, connection);
                 mdr = command.ExecuteReader();
-                if (mdr.Read())
-                {
-                }
-                mdr.Close();
+                 mdr.Close();
 
-                string selectQuery3 = string.Format("INSERT INTO `article`( `Name`, `ArticleContent`, `Language`,`PublishedDate`, `ContentID`) VALUES ('{0}','{1}','{2}','{3}',{4});", ATitle, AContent, Language, Session["LoginDate"], ContentID);
+                string selectQuery3 = string.Format("INSERT INTO `article`(`ArticleID`,  `Name`, `ArticleContent`, `Language`,`PublishedDate`, `ContentID`) VALUES ({0},'{1}','{2}','{3}','{4}',{5});", AID,ATitle, AContent, Language, Session["LoginDate"], ContentID);
                 command = new MySqlCommand(selectQuery3, connection);
                 mdr = command.ExecuteReader();
-                if (mdr.Read())
+                if (mdr.RecordsAffected==1)
                 {
                     MessageBox.Show("Article Added Successful!");
                 }
                 mdr.Close();
-            }
+                    }
         }
+    
+        
 
         protected void Birds_Click(object sender, EventArgs e)
         {
