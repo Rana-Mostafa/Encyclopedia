@@ -109,19 +109,19 @@ namespace Encyclopedia
                 case "Card1":
                     lbl = (System.Web.UI.WebControls.Label)form1.FindControl("firsttitle");
                     ArtName = lbl.Text;
-                    Response.Redirect("View Content.aspx?ArtName=" + ArtName);
+                    Response.Redirect("Admin-View Content.aspx?ArtName=" + ArtName);
                     break;
 
                 case "Card2":
                     lbl = (System.Web.UI.WebControls.Label)form1.FindControl("middletitle");
                     ArtName = lbl.Text;
-                    Response.Redirect("View Content.aspx?ArtName=" + ArtName);
+                    Response.Redirect("Admin-View Content.aspx?ArtName=" + ArtName);
                     break;
 
                 case "Card3":
                     lbl = (System.Web.UI.WebControls.Label)form1.FindControl("lasttitle");
                     ArtName = lbl.Text;
-                    Response.Redirect("View Content.aspx?ArtName=" + ArtName);
+                    Response.Redirect("Admin-View Content.aspx?ArtName=" + ArtName);
                     break;
 
             }
