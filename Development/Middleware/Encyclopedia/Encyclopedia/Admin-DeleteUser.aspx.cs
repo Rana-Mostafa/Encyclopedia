@@ -24,112 +24,120 @@ namespace Encyclopedia
         {
             string userName = username.Text;
             string userEmail = useremail.Text;
-            int UserID = 0;
-            List<int> ContentID = new List<int>();
-            string selectQuery = string.Format("SELECT UserID FROM user WHERE Username = '{0}' and Email = '{1}';", userName, userEmail);
-            command = new MySqlCommand(selectQuery, connection);
-            mdr = command.ExecuteReader();
-            if (mdr.Read())
-            {
-                UserID = mdr.GetInt16(0);
-            }
-            mdr.Close();
 
-            string selectQuery1 = string.Format("DELETE FROM `user_category` WHERE UserID = '{0}';", UserID);
-            command = new MySqlCommand(selectQuery1, connection);
-            mdr = command.ExecuteReader();
-            if (mdr.Read())
-            {
-                UserID = mdr.GetInt16(0);
-            }
-            mdr.Close();
+            if (userName == "")
+                MessageBox.Show("Username is required");
 
-            string selectQuery2 = string.Format("SELECT `ContentID` FROM `content` WHERE `UserID`='{0}'", UserID);
-            command = new MySqlCommand(selectQuery2, connection);
-            mdr = command.ExecuteReader();
-            while (mdr.Read())
-            {
-                ContentID.Add(mdr.GetInt16(0));
-            }
-            mdr.Close();
+            else if (userEmail == "")
+                MessageBox.Show("Email is required");
 
-            string selectQuery3, selectQuery4;
-            for (int i = 0; i < ContentID.Count; i++)
+            else
             {
-                selectQuery3 = string.Format("select ArticleID FROM `article` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
-                command = new MySqlCommand(selectQuery3, connection);
+                int UserID = 0;
+                List<int> ContentID = new List<int>();
+                string selectQuery = string.Format("SELECT UserID FROM user WHERE Username = '{0}' and Email = '{1}';", userName, userEmail);
+                command = new MySqlCommand(selectQuery, connection);
                 mdr = command.ExecuteReader();
-                if (mdr.HasRows)
+                if (mdr.Read())
                 {
-                    mdr.Close();
-                    selectQuery4 = string.Format("DELETE FROM `article` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
-                    command = new MySqlCommand(selectQuery4, connection);
-                    mdr = command.ExecuteReader();
-                    mdr.Read();
-                    mdr.Close();
-                    continue;
-                }
+                    UserID = mdr.GetInt16(0);
 
-                else
-                {
 
                     mdr.Close();
-                    selectQuery3 = string.Format("select VideoID FROM `video` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
-                    command = new MySqlCommand(selectQuery3, connection);
+
+                    string selectQuery2 = string.Format("SELECT `ContentID` FROM `content` WHERE `UserID`='{0}'", UserID);
+                    command = new MySqlCommand(selectQuery2, connection);
                     mdr = command.ExecuteReader();
-                    if (mdr.HasRows)
+                    while (mdr.Read())
                     {
-                        mdr.Close();
-                        selectQuery4 = string.Format("DELETE FROM `video` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
-                        command = new MySqlCommand(selectQuery4, connection);
-                        mdr = command.ExecuteReader();
-                        mdr.Read();
-                        mdr.Close();
-                        continue;
+                        ContentID.Add(mdr.GetInt16(0));
                     }
+                    mdr.Close();
 
-                    else
+                    string selectQuery3, selectQuery4;
+                    for (int i = 0; i < ContentID.Count; i++)
                     {
-
-                        mdr.Close();
-
-                        selectQuery3 = string.Format("select VoiceRecID FROM `voice_rec` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
+                        selectQuery3 = string.Format("select ArticleID FROM `article` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
                         command = new MySqlCommand(selectQuery3, connection);
                         mdr = command.ExecuteReader();
                         if (mdr.HasRows)
                         {
                             mdr.Close();
-                            selectQuery4 = string.Format("DELETE FROM `voice_rec` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
+                            selectQuery4 = string.Format("DELETE FROM `article` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
                             command = new MySqlCommand(selectQuery4, connection);
                             mdr = command.ExecuteReader();
                             mdr.Read();
                             mdr.Close();
                             continue;
                         }
+
+                        else
+                        {
+
+                            mdr.Close();
+                            selectQuery3 = string.Format("select VideoID FROM `video` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
+                            command = new MySqlCommand(selectQuery3, connection);
+                            mdr = command.ExecuteReader();
+                            if (mdr.HasRows)
+                            {
+                                mdr.Close();
+                                selectQuery4 = string.Format("DELETE FROM `video` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
+                                command = new MySqlCommand(selectQuery4, connection);
+                                mdr = command.ExecuteReader();
+                                mdr.Read();
+                                mdr.Close();
+                                continue;
+                            }
+
+                            else
+                            {
+
+                                mdr.Close();
+
+                                selectQuery3 = string.Format("select VoiceRecID FROM `voice_rec` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
+                                command = new MySqlCommand(selectQuery3, connection);
+                                mdr = command.ExecuteReader();
+                                if (mdr.HasRows)
+                                {
+                                    mdr.Close();
+                                    selectQuery4 = string.Format("DELETE FROM `voice_rec` WHERE `ContentID` = '{0}'", ContentID.ElementAt(i));
+                                    command = new MySqlCommand(selectQuery4, connection);
+                                    mdr = command.ExecuteReader();
+                                    mdr.Read();
+                                    mdr.Close();
+                                    continue;
+                                }
+                            }
+                        }
+                        mdr.Close();
+
+
                     }
+
+                    string selectQuery5 = string.Format("DELETE FROM  `content` WHERE `UserID`='{0}'", UserID);
+                    command = new MySqlCommand(selectQuery5, connection);
+                    mdr = command.ExecuteReader();
+                    if (mdr.Read())
+                    {
+                    }
+                    mdr.Close();
+
+                    string selectQuery6 = string.Format("DELETE FROM  `user` WHERE `UserID`='{0}'", UserID);
+                    command = new MySqlCommand(selectQuery6, connection);
+                    mdr = command.ExecuteReader();
+                    if (mdr.Read())
+                    {
+                    }
+                    mdr.Close();
+
+                    MessageBox.Show("User Deleted sucessfully");
                 }
-                mdr.Close();
 
-
+                else
+                {
+                    MessageBox.Show("This user not existing in system");
+                }
             }
-
-            string selectQuery5 = string.Format("DELETE FROM  `content` WHERE `UserID`='{0}'", UserID);
-            command = new MySqlCommand(selectQuery5, connection);
-            mdr = command.ExecuteReader();
-            if (mdr.Read())
-            {
-            }
-            mdr.Close();
-
-            string selectQuery6 = string.Format("DELETE FROM  `user` WHERE `UserID`='{0}'", UserID);
-            command = new MySqlCommand(selectQuery6, connection);
-            mdr = command.ExecuteReader();
-            if (mdr.Read())
-            {
-            }
-            mdr.Close();
-
-            MessageBox.Show("User Deleted sucessfully");
         }
 
         protected void Birds_Click(object sender, EventArgs e)

@@ -23,40 +23,87 @@ namespace Encyclopedia
 
         protected void FollowBtn_Click(object sender, EventArgs e)
         {
-            int SelectedItem = DropDownList1.SelectedIndex;
-            if (SelectedItem == 0)
+
+            string CID = contentID.Text;
+            string CContent = contentName.Text;
+
+            if (CID == "" || CContent == "")
+                MessageBox.Show("please fill all required fields");
+
+            else
             {
-                string selectQuery2 = "DELETE FROM encyclopedia.video WHERE ContentID = '" + contentID.Text + "' AND VideoName = '" + contentName.Text + "';";
-                command = new MySqlCommand(selectQuery2, connection);
-                mdr = command.ExecuteReader();
-                mdr.Close();
-                MessageBox.Show("Video Deleted Successful!");
+                int SelectedItem = DropDownList1.SelectedIndex;
+                if (SelectedItem == 0)
+                {
+                    string selectQuery2 = "DELETE FROM encyclopedia.video WHERE ContentID = '" + contentID.Text + "' AND VideoName = '" + contentName.Text + "';";
+                    command = new MySqlCommand(selectQuery2, connection);
+                    mdr = command.ExecuteReader();
+                    if (mdr.RecordsAffected == 1)
+                    {
+                        mdr.Close();
+                        string selectQuery = "DELETE FROM encyclopedia.content WHERE ContentID = '" + contentID.Text + "' AND name = '" + contentName.Text + "';";
+                        command = new MySqlCommand(selectQuery, connection);
+                        mdr = command.ExecuteReader();
+                        if (mdr.Read())
+                            MessageBox.Show("Video Deleted Successful!");
+                        mdr.Close();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("You enterd a wrong ID/Name.. Please Check AGAIN!");
+                    }
 
 
+                }
+                if (SelectedItem == 1)
+                {
+                    string selectQuery2 = "DELETE FROM encyclopedia.voice_rec  WHERE ContentID = '" + contentID.Text + "' AND VoiceRecName = '" + contentName.Text + "';";
+                    command = new MySqlCommand(selectQuery2, connection);
+                    mdr = command.ExecuteReader();
+                    if (mdr.RecordsAffected == 1)
+                    {
+                        mdr.Close();
+                        string selectQuery = "DELETE FROM encyclopedia.content WHERE ContentID = '" + contentID.Text + "' AND name = '" + contentName.Text + "';";
+                        command = new MySqlCommand(selectQuery, connection);
+                        mdr = command.ExecuteReader();
+                        if (mdr.RecordsAffected == 1)
+                            MessageBox.Show("Voice Record Deleted Successful!");
+                        mdr.Close();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("You enterd a wrong ID/Name.. Please Check AGAIN!");
+                    }
+
+                }
+                if (SelectedItem == 2)
+                {
+                    string selectQuery2 = "DELETE FROM encyclopedia.article WHERE ContentID = '" + contentID.Text + "' AND Name = '" + contentName.Text + "';";
+                    command = new MySqlCommand(selectQuery2, connection);
+                    mdr = command.ExecuteReader();
+                    if (mdr.RecordsAffected == 1)
+                    {
+                        mdr.Close();
+                        string selectQuery = "DELETE FROM encyclopedia.content WHERE ContentID = '" + contentID.Text + "' AND name = '" + contentName.Text + "';";
+                        command = new MySqlCommand(selectQuery, connection);
+                        mdr = command.ExecuteReader();
+                        if (mdr.RecordsAffected == 1)
+                            MessageBox.Show("Article Deleted Successful!");
+                        mdr.Close();
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("You enterd a wrong ID/Name.. Please Check AGAIN!");
+                    }
+
+
+                }
+
+                connection.Close();
             }
-            if (SelectedItem == 1)
-            {
-                string selectQuery2 = "DELETE FROM encyclopedia.voice_rec  WHERE ContentID = '" + contentID.Text + "' AND VoiceRecName = '" + contentName.Text + "';";
-                command = new MySqlCommand(selectQuery2, connection);
-                mdr = command.ExecuteReader();
-                mdr.Close();
-                MessageBox.Show("Voice Record Deleted Successful!");
-
-            }
-            if (SelectedItem == 2)
-            {
-                string selectQuery2 = "DELETE FROM encyclopedia.aricle WHERE ContentID = '" + contentID.Text + "' AND Name = '" + contentName.Text + "';";
-                command = new MySqlCommand(selectQuery2, connection);
-                mdr = command.ExecuteReader();
-                mdr.Close();
-                MessageBox.Show("Article Deleted Successful!");
-
-
-            }
-            string selectQuery = "DELETE FROM encyclopedia.content WHERE ContentID = '" + contentID.Text + "' AND name = '" + contentName.Text + "';";
-            command = new MySqlCommand(selectQuery, connection);
-            mdr = command.ExecuteReader();
-            connection.Close();
         }
         protected void Birds_Click(object sender, EventArgs e)
         {
