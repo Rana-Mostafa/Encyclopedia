@@ -62,7 +62,7 @@ body {
 
 .card-body {
     width: 310px;
-    height: 250px;
+    height: 80px;
     border-radius: 10px;
     border: 3px solid;
     margin-top: 5px;
@@ -87,6 +87,10 @@ body {
         border-color: #123C96;
         border: 3px solid;
     }
+
+.card-title {
+    float: left;
+}
 
 .navbar-text {
     width: 100%;

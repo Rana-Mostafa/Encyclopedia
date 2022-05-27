@@ -194,7 +194,7 @@ a img:hover {
     font-family: 'Baloo Bhaijaan 2', 'cursive';
     font-size: 1.5rem;
     color: #6a6b6e;
-    padding-top: 4px;
+    padding-top: 9px;
 }
 
 #Del {
@@ -209,5 +209,16 @@ a img:hover {
     font-size: 1.5rem;
     color: #6a6b6e;
     padding-top: 4px;
+}
+#log {
+    font-family: 'Baloo Bhaijaan 2', 'cursive';
+    font-size: 1.5rem;
+    color: #6a6b6e;
+    padding-top: 4px;
+}
+
+.logout {
+    position:relative;
+    float:right;
 }
 

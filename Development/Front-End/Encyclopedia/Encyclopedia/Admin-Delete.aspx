@@ -27,8 +27,8 @@
 						<div class="dropdown">
                         <button class="dropbtn">Delete</button>
                         <div class="dropdown-content">
-                        <a href="#">Delete Contenet</a>
-                        <a href="#">Delete User</a>
+                        <a href="Admin-Delete.aspx">Delete Contenet</a>
+                        <a href="Admin-DeleteUser.aspx">Delete User</a>
                         </div>
                         </div></div>
 				
