@@ -33,7 +33,7 @@
                                 </button>
                                 <div class="dropdown-content">
                                     <asp:LinkButton ID="DeleteUser" class="linkstyle" runat="server" OnClick="DeleteUser_Click">Delete User</asp:LinkButton>
-                                    <asp:LinkButton ID="DeleteContent" class="linkstyle" runat="server" OnClick="DeleteContent_Click">Delete Contenet</asp:LinkButton>
+                                    <asp:LinkButton ID="DeleteContent" class="linkstyle" runat="server" OnClick="DeleteContent_Click">Delete Content</asp:LinkButton>
                                 </div>
                             </div>
                         </div>
